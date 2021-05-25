@@ -1,0 +1,1787 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
+* {
+  font-family: "Lato", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+label {
+  margin: 0;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.fadeInOnScroll {
+  visibility: hidden;
+}
+
+.fadeIn {
+  visibility: visible !important;
+}
+
+::-moz-selection {
+  background: #13dcc2;
+  color: #ffffff;
+}
+
+::selection {
+  background: #13dcc2;
+  color: #ffffff;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+header {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.16);
+  position: fixed;
+  width: 100%;
+  background-color: #ffffff;
+  z-index: 999;
+}
+header .navbar-brand {
+  margin-right: 0;
+}
+header .navbar-brand img {
+  max-width: 100%;
+  -webkit-transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+}
+header .navbar-brand:hover img {
+  opacity: 0.6;
+}
+header .navbar-collapse .navbar-nav .nav-item .nav-link {
+  -webkit-transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #43576d;
+  letter-spacing: 1px;
+  padding: 0 0.75rem;
+}
+header .navbar-collapse .navbar-nav .nav-item .nav-link:hover {
+  color: #13dcc2;
+}
+header .navbar-collapse .navbar-nav .nav-item .active {
+  color: #13dcc2;
+}
+header .dropdown-menu {
+  top: 38px;
+  margin: 0;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  padding: 0;
+}
+header .dropdown-menu .dropdown-item {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #43576d;
+  letter-spacing: 1px;
+  text-transform: none;
+  padding: 0.5rem 1rem;
+}
+
+.carousel {
+  position: relative;
+  padding-top: 58px;
+}
+.carousel .carousel-inner .carousel-item {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+.carousel .carousel-inner .carousel-item .container .row {
+  min-height: 60vh;
+  align-items: flex-end;
+}
+.carousel .carousel-inner .carousel-item .container .row .info, .carousel .carousel-inner .carousel-item .container .row .otras-cirugias {
+  background-image: linear-gradient(to right, #45abff, #13dcc2);
+  opacity: 0.9;
+  padding: 4rem;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+.carousel .carousel-inner .carousel-item .container .row .info h4, .carousel .carousel-inner .carousel-item .container .row .otras-cirugias h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+.carousel .carousel-inner .carousel-item .container .row .info p, .carousel .carousel-inner .carousel-item .container .row .otras-cirugias p {
+  font-size: 0.9rem;
+  color: #ffffff;
+  line-height: 1.5rem;
+}
+.carousel .carousel-inner .carousel-item .container .row .info a, .carousel .carousel-inner .carousel-item .container .row .otras-cirugias a {
+  -webkit-transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  background-color: #ffffff;
+  color: #45abff;
+  border-radius: 200px;
+  padding: 1rem 1.5rem;
+  font-size: 14px;
+  text-transform: uppercase;
+  display: inline-block;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+.carousel .carousel-inner .carousel-item .container .row .info a:hover, .carousel .carousel-inner .carousel-item .container .row .otras-cirugias a:hover {
+  background-color: #13dcc2;
+  color: #ffffff;
+}
+
+.services, .lugares-atencion {
+  padding: 3rem 0;
+}
+.services .container .row div .card, .lugares-atencion .container .row div .card {
+  box-shadow: 0 8px 20px 0 rgba(224, 224, 224, 0.5);
+  -webkit-transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  background-color: #ffffff;
+  border-radius: 3px;
+  cursor: pointer;
+  border: none;
+}
+.services .container .row div .card .img img, .lugares-atencion .container .row div .card .img img {
+  width: 100%;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.services .container .row div .card .img hr, .lugares-atencion .container .row div .card .img hr {
+  margin: 0;
+  height: 6px;
+  width: 100%;
+  background-image: linear-gradient(to right, #45abff, #13dcc2);
+}
+.services .container .row div .card .txt, .lugares-atencion .container .row div .card .txt {
+  padding: 1.5rem;
+}
+.services .container .row div .card .txt h3, .lugares-atencion .container .row div .card .txt h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #43576d;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+.services .container .row div .card .txt p, .lugares-atencion .container .row div .card .txt p {
+  font-size: 0.9rem;
+  color: #43576d;
+  line-height: 1.5rem;
+}
+.services .container .row div .card .txt a, .lugares-atencion .container .row div .card .txt a {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #13dcc2;
+  letter-spacing: 1px;
+  -webkit-transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  display: inline-block;
+  padding-top: 1rem;
+}
+.services .container .row div .card .txt a:hover, .lugares-atencion .container .row div .card .txt a:hover {
+  color: #45abff;
+}
+.services .container .row div .card:hover, .lugares-atencion .container .row div .card:hover {
+  box-shadow: 0 18px 28px 0 rgba(201, 201, 201, 0.5);
+}
+
+.cases, .heading {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+.cases .container .row, .heading .container .row {
+  min-height: 420px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.cases .container .row h2, .heading .container .row h2 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+.cases .container .row p, .heading .container .row p {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  max-width: 680px;
+}
+.cases .container .row a, .heading .container .row a {
+  -webkit-transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  background-color: #ffffff;
+  color: #13dcc2;
+  border-radius: 200px;
+  padding: 1rem 1.5rem;
+  font-size: 14px;
+  text-transform: uppercase;
+  display: inline-block;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+}
+.cases .container .row a:hover, .heading .container .row a:hover {
+  background-color: #13dcc2;
+  color: #ffffff;
+}
+
+.contact .container {
+  padding: 2rem 0;
+}
+.contact .container .row div {
+  text-align: center;
+}
+.contact .container .row div img {
+  max-width: 100%;
+  margin-bottom: 1rem;
+}
+.contact .container .row div h5 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #43576d;
+  font-weight: 400;
+}
+.contact .container .row div p {
+  font-size: 0.9rem;
+  color: #6a7c92;
+  line-height: 1.5rem;
+}
+.contact .container .row div a {
+  font-size: 0.9rem;
+  color: #13dcc2;
+  line-height: 1.5rem;
+  text-decoration: underline;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+.contact .container .row div a:hover {
+  text-decoration: none;
+}
+
+.form, .contact-heading {
+  background-image: linear-gradient(to right, #45abff, #13dcc2);
+}
+.form .container, .contact-heading .container {
+  padding: 3rem 0;
+}
+.form .container .row, .contact-heading .container .row {
+  text-align: center;
+}
+.form .container .row .form-container h2, .contact-heading .container .row .form-container h2 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+.form .container .row .form-container p, .contact-heading .container .row .form-container p {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #ffffff;
+}
+.form .container .row .form-container form, .contact-heading .container .row .form-container form {
+  margin-top: 2rem;
+}
+.form .container .row .form-container form div input:not([type=submit]), .contact-heading .container .row .form-container form div input:not([type=submit]) {
+  -webkit-transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  background-color: rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+  width: 100%;
+  border-radius: 8px;
+  padding: 1rem;
+  font-size: 0.75rem;
+  border: none;
+  box-shadow: none;
+  margin: 0.5rem 0;
+}
+.form .container .row .form-container form div input:not([type=submit])::-webkit-input-placeholder, .contact-heading .container .row .form-container form div input:not([type=submit])::-webkit-input-placeholder {
+  color: #ffffff;
+}
+.form .container .row .form-container form div input:not([type=submit])::-moz-placeholder, .contact-heading .container .row .form-container form div input:not([type=submit])::-moz-placeholder {
+  color: #ffffff;
+}
+.form .container .row .form-container form div input:not([type=submit]):-ms-input-placeholder, .contact-heading .container .row .form-container form div input:not([type=submit]):-ms-input-placeholder {
+  color: #ffffff;
+}
+.form .container .row .form-container form div input:not([type=submit]):-moz-placeholder, .contact-heading .container .row .form-container form div input:not([type=submit]):-moz-placeholder {
+  color: #ffffff;
+}
+.form .container .row .form-container form div textarea, .contact-heading .container .row .form-container form div textarea {
+  -webkit-transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  background-color: rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+  width: 100%;
+  border-radius: 8px;
+  padding: 1rem;
+  font-size: 0.75rem;
+  resize: none;
+  border: none;
+  height: 90px;
+  margin: 0.5rem 0;
+}
+.form .container .row .form-container form div textarea::-webkit-input-placeholder, .contact-heading .container .row .form-container form div textarea::-webkit-input-placeholder {
+  color: #ffffff;
+}
+.form .container .row .form-container form div textarea::-moz-placeholder, .contact-heading .container .row .form-container form div textarea::-moz-placeholder {
+  color: #ffffff;
+}
+.form .container .row .form-container form div textarea:-ms-input-placeholder, .contact-heading .container .row .form-container form div textarea:-ms-input-placeholder {
+  color: #ffffff;
+}
+.form .container .row .form-container form div textarea:-moz-placeholder, .contact-heading .container .row .form-container form div textarea:-moz-placeholder {
+  color: #ffffff;
+}
+.form .container .row .form-container form div select, .contact-heading .container .row .form-container form div select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  color: #ffffff;
+  width: 100%;
+  border-radius: 8px;
+  padding: 1rem;
+  font-size: 0.75rem;
+  border: none;
+  box-shadow: none;
+  background: url("data:image/svg+xml;utf8,<svg fill='#FFF' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'> <path d='M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z'/> <path d='M0-.75h24v24H0z' fill='none'/> </svg>"), rgba(255, 255, 255, 0.4);
+  background-repeat: no-repeat;
+  background-position: 98%;
+  margin: 0.5rem 0;
+}
+.form .container .row .form-container form div select::-webkit-input-placeholder, .contact-heading .container .row .form-container form div select::-webkit-input-placeholder {
+  color: #ffffff;
+}
+.form .container .row .form-container form div select::-moz-placeholder, .contact-heading .container .row .form-container form div select::-moz-placeholder {
+  color: #ffffff;
+}
+.form .container .row .form-container form div select:-ms-input-placeholder, .contact-heading .container .row .form-container form div select:-ms-input-placeholder {
+  color: #ffffff;
+}
+.form .container .row .form-container form div select:-moz-placeholder, .contact-heading .container .row .form-container form div select:-moz-placeholder {
+  color: #ffffff;
+}
+.form .container .row .form-container form div .g-recaptcha, .contact-heading .container .row .form-container form div .g-recaptcha {
+  margin-bottom: 0.5rem;
+}
+.form .container .row .form-container form div input[type=submit], .contact-heading .container .row .form-container form div input[type=submit] {
+  -webkit-transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  background-color: #13dcc2;
+  color: #ffffff;
+  border-radius: 200px;
+  padding: 1rem 1.5rem;
+  font-size: 14px;
+  text-transform: uppercase;
+  display: inline-block;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  min-width: 120px;
+}
+.form .container .row .form-container form div input[type=submit]:hover, .contact-heading .container .row .form-container form div input[type=submit]:hover {
+  background-color: #45abff;
+}
+.form .container .row .form-container form div .parsley-error, .contact-heading .container .row .form-container form div .parsley-error {
+  background-color: rgba(255, 0, 0, 0.4) !important;
+  animation-name: shake;
+  animation-duration: 0.8s;
+  animation-fill-mode: both;
+}
+.form .container .row .form-container form div .parsley-errors-list, .contact-heading .container .row .form-container form div .parsley-errors-list {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: red;
+  letter-spacing: 1px;
+  text-align: right;
+}
+
+footer {
+  background-color: #43576d;
+}
+footer .container {
+  padding: 3rem 0;
+}
+footer .container .row .logo img {
+  max-width: 100%;
+  margin-bottom: 0.5rem;
+}
+footer .container .row .logo p {
+  font-size: 0.9rem;
+  color: #6a7c92;
+  line-height: 1.5rem;
+  margin: 0.5rem 0;
+}
+footer .container .row .logo p a {
+  -webkit-transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  color: #13dcc2;
+}
+footer .container .row .logo p a:hover {
+  color: #45abff;
+}
+footer .container .row .list h5 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+footer .container .row .list ul li {
+  margin: 0.5rem 0;
+}
+footer .container .row .list ul li a {
+  font-size: 0.9rem;
+  color: #6a7c92;
+  line-height: 1.5rem;
+  -webkit-transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+}
+footer .container .row .list ul li a:hover {
+  color: #13dcc2;
+}
+
+.heading {
+  padding-top: 58px;
+}
+.heading .container .row h1 {
+  color: #ffffff;
+  font-weight: 300;
+}
+.heading .container .row p {
+  margin-bottom: 0;
+  opacity: 0.8;
+  max-width: 680px;
+}
+
+.quienes-somos-excerpt .container {
+  padding: 3rem 0;
+}
+.quienes-somos-excerpt .container .row .img img {
+  width: 100%;
+  border-radius: 8px;
+}
+.quienes-somos-excerpt .container .row .txt p {
+  font-size: 1rem;
+  color: #6a7c92;
+  line-height: 2rem;
+  font-weight: 300;
+  margin: 0.5rem 0;
+}
+
+.zonas-influencia .container, .zonas-influencia-contacto .container, .info .container .row .beneficios .container, .otras-cirugias .container .row .beneficios .container {
+  background-color: rgba(19, 220, 194, 0.06);
+  border: 1px solid #13dcc2;
+  border-radius: 6px;
+  padding: 1rem;
+}
+.zonas-influencia .container h3, .zonas-influencia-contacto .container h3, .info .container .row .beneficios .container h3, .otras-cirugias .container .row .beneficios .container h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #43576d;
+}
+.zonas-influencia .container ul, .zonas-influencia-contacto .container ul, .info .container .row .beneficios .container ul, .otras-cirugias .container .row .beneficios .container ul {
+  margin-top: 1rem;
+}
+.zonas-influencia .container ul li, .zonas-influencia-contacto .container ul li, .info .container .row .beneficios .container ul li, .otras-cirugias .container .row .beneficios .container ul li {
+  margin: 0.5rem 0;
+}
+.zonas-influencia .container ul li svg, .zonas-influencia-contacto .container ul li svg, .info .container .row .beneficios .container ul li svg, .otras-cirugias .container .row .beneficios .container ul li svg {
+  color: #13dcc2;
+}
+.zonas-influencia .container ul li p, .zonas-influencia-contacto .container ul li p, .info .container .row .beneficios .container ul li p, .otras-cirugias .container .row .beneficios .container ul li p {
+  font-size: 1rem;
+  color: #6a7c92;
+  line-height: 2rem;
+  font-weight: 300;
+  display: inline;
+  margin: 0 0.5rem;
+}
+.zonas-influencia .container ul li p strong, .zonas-influencia-contacto .container ul li p strong, .info .container .row .beneficios .container ul li p strong, .otras-cirugias .container .row .beneficios .container ul li p strong {
+  font-weight: 700;
+}
+
+.lugares-atencion .container h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #43576d;
+  margin-bottom: 1rem;
+}
+
+.instituciones {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-image: url("../img/bg/bg-instituciones.jpg");
+}
+.instituciones .container {
+  padding: 3rem 0;
+  min-height: 420px;
+  text-align: center;
+}
+.instituciones .container .row h2 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+.instituciones .container .row li {
+  margin: 1rem 0;
+  text-align: left;
+}
+.instituciones .container .row li h6 {
+  font-size: 0.9rem;
+  color: #ffffff;
+  line-height: 1.5rem;
+  font-weight: 700;
+  font-size: 13px;
+}
+.instituciones .container .row li .row p {
+  font-size: 0.9rem;
+  color: #ffffff;
+  line-height: 1.5rem;
+  font-size: 13px;
+}
+.instituciones .container .row li .row .icon svg {
+  color: #ffffff;
+}
+
+.staff {
+  padding: 3rem 0;
+}
+.staff .container .row .title h2 {
+  font-size: 2.5rem;
+  color: #13dcc2;
+}
+.staff .container .row .title p {
+  font-size: 1rem;
+  color: #6a7c92;
+  line-height: 2rem;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.4rem;
+}
+.staff .container .row .cv .card {
+  box-shadow: 0 8px 20px 0 rgba(224, 224, 224, 0.5);
+  -webkit-transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  background-color: #ffffff;
+  border-radius: 3px;
+  cursor: pointer;
+  border: none;
+  padding: 1rem;
+}
+.staff .container .row .cv .card h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #43576d;
+  font-weight: 400;
+}
+.staff .container .row .cv .card p {
+  font-size: 1rem;
+  color: #6a7c92;
+  line-height: 2rem;
+  font-weight: 300;
+}
+.staff .container .row .cv .card .row div {
+  padding-top: 1rem;
+}
+.staff .container .row .cv .card .row div a {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #13dcc2;
+  letter-spacing: 1px;
+  -webkit-transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+}
+.staff .container .row .cv .card .row div a:hover {
+  color: #45abff;
+}
+.staff .container .row .cv .card:hover {
+  box-shadow: 0 18px 28px 0 rgba(201, 201, 201, 0.5);
+}
+
+.otros-servicios, .casos {
+  background-color: #f9fcfe;
+}
+.otros-servicios .container, .casos .container {
+  padding: 3rem 0 2rem 0;
+}
+.otros-servicios .container .row h4, .casos .container .row h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #43576d;
+  font-weight: 400;
+}
+.otros-servicios .container .row .column, .casos .container .row .column {
+  margin-top: 1rem;
+}
+.otros-servicios .container .row .column p, .casos .container .row .column p {
+  font-size: 1rem;
+  color: #43576d;
+  line-height: 2rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+.otros-servicios .container .row .column p a, .casos .container .row .column p a {
+  -webkit-transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  color: #13dcc2;
+}
+.otros-servicios .container .row .column p a:hover, .casos .container .row .column p a:hover {
+  color: #45abff;
+}
+.otros-servicios .container .row .column h6, .casos .container .row .column h6 {
+  font-size: 1rem;
+  color: #43576d;
+  line-height: 2rem;
+  font-weight: 300;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.otros-servicios .container .row .column ul, .casos .container .row .column ul {
+  list-style: disc;
+  padding-left: 1rem;
+}
+.otros-servicios .container .row .column ul li, .casos .container .row .column ul li {
+  font-size: 1rem;
+  color: #43576d;
+  line-height: 2rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+.otros-servicios .container .row .column ul li a, .casos .container .row .column ul li a {
+  color: #13dcc2;
+}
+
+.preguntas-frecuentes {
+  padding: 3rem 0;
+}
+.preguntas-frecuentes .container .row h1 {
+  font-size: 2.5rem;
+  color: #13dcc2;
+  margin-bottom: 0.5rem;
+}
+.preguntas-frecuentes .container .row h6 {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #43576d;
+  max-width: 620px;
+}
+.preguntas-frecuentes .container .row .acordion {
+  margin: 1.5rem 0;
+}
+.preguntas-frecuentes .container .row .acordion .card {
+  background-color: transparent;
+  border-radius: 0;
+  border: none;
+  border-top: 1px solid #eaeaea;
+}
+.preguntas-frecuentes .container .row .acordion .card .card-header:first-child {
+  border-radius: 0;
+}
+.preguntas-frecuentes .container .row .acordion .card .card-header {
+  background-color: transparent;
+  border-bottom: none;
+  padding: 1rem;
+}
+.preguntas-frecuentes .container .row .acordion .card .card-header h5 {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #43576d;
+}
+.preguntas-frecuentes .container .row .acordion .card .card-header h5 button {
+  -webkit-transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  color: #43576d;
+  border: none;
+  padding: 0;
+  font-weight: 300;
+}
+.preguntas-frecuentes .container .row .acordion .card .card-header h5 button:hover, .preguntas-frecuentes .container .row .acordion .card .card-header h5 button:focus {
+  opacity: 0.6;
+  text-decoration: none;
+}
+.preguntas-frecuentes .container .row .acordion .card .card-header h5 svg {
+  color: #13dcc2;
+  margin-right: 0.5rem;
+}
+.preguntas-frecuentes .container .row .acordion .card .information .card-body {
+  padding: 1rem;
+}
+.preguntas-frecuentes .container .row .acordion .card .information .card-body p {
+  font-size: 1rem;
+  color: #43576d;
+  line-height: 2rem;
+  font-weight: 300;
+}
+.preguntas-frecuentes .container .row .acordion .card .information .card-body a {
+  color: #13dcc2;
+  -webkit-transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+}
+.preguntas-frecuentes .container .row .acordion .card .information .card-body a:hover {
+  opacity: 0.6;
+}
+.preguntas-frecuentes .container .row .acordion .card .information .card-body ul,
+.preguntas-frecuentes .container .row .acordion .card .information .card-body ol {
+  margin: 1rem 0;
+  list-style-type: disc;
+  padding-left: 2rem;
+}
+.preguntas-frecuentes .container .row .acordion .card .information .card-body ul li,
+.preguntas-frecuentes .container .row .acordion .card .information .card-body ol li {
+  font-size: 1rem;
+  color: #43576d;
+  line-height: 2rem;
+  font-weight: 300;
+}
+.preguntas-frecuentes .container .row .acordion .card .information .card-body blockquote {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #43576d;
+  padding-left: 2rem;
+  font-style: italic;
+  margin: 2rem 0;
+  border-left: 3px solid #13dcc2;
+}
+.preguntas-frecuentes .container .row .acordion .card .information .card-body .image {
+  margin: 1rem;
+  text-align: center;
+}
+
+.casos .galeria {
+  margin-top: 1.5rem;
+}
+.casos .galeria li {
+  margin-bottom: 2rem;
+}
+.casos .galeria li a {
+  display: block;
+  position: relative;
+}
+.casos .galeria li a .overlay {
+  -webkit-transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, #45abff, #13dcc2);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.casos .galeria li a .overlay h6 {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+.casos .galeria li a .overlay p {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+.casos .galeria li a img {
+  border-radius: 3px;
+  width: 100%;
+}
+.casos .galeria li a:hover .overlay {
+  opacity: 0.8;
+}
+.casos .galeria .paginator {
+  -webkit-transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  background-color: #13dcc2;
+  color: #ffffff;
+  border-radius: 200px;
+  padding: 1rem 1.5rem;
+  font-size: 14px;
+  text-transform: uppercase;
+  display: inline-block;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  margin: auto;
+}
+.casos .galeria .paginator:hover {
+  background-color: #45abff;
+}
+
+.modal {
+  background-color: rgba(67, 87, 109, 0.96);
+}
+.modal .close {
+  padding: 1rem;
+  -webkit-transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  opacity: 1;
+}
+.modal .close svg {
+  color: #ffffff;
+}
+.modal .close:hover {
+  opacity: 0.6;
+}
+.modal .modal-dialog .modal-content {
+  background-color: transparent;
+  border: none;
+}
+.modal .modal-dialog .modal-content .modal-header {
+  padding: 1rem 0;
+  border-bottom: none;
+}
+.modal .modal-dialog .modal-content .modal-header h5 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  font-weight: 300;
+}
+.modal .modal-dialog .modal-content .modal-body {
+  padding: 0;
+}
+.modal .modal-dialog .modal-content .modal-body .carousel {
+  padding-top: 0;
+}
+.modal .modal-dialog .modal-content .modal-body .carousel .carousel-inner .carousel-item .form-row div {
+  position: relative;
+  background-color: #ffffff;
+}
+.modal .modal-dialog .modal-content .modal-body .carousel .carousel-inner .carousel-item .form-row div img {
+  width: 100%;
+}
+.modal .modal-dialog .modal-content .modal-body .carousel .carousel-inner .carousel-item .form-row div p {
+  border: 1px solid #ffffff;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  letter-spacing: 1px;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+}
+.modal .modal-dialog .modal-content .modal-body .carousel .carousel-inner .carousel-item .form-row .antes {
+  padding-left: 0;
+}
+.modal .modal-dialog .modal-content .modal-body .carousel .carousel-inner .carousel-item .form-row .despues {
+  padding-right: 0;
+}
+.modal .modal-dialog .modal-content .modal-body .carousel .carousel-control-prev {
+  -webkit-transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  background-image: linear-gradient(to left, transparent, #6a7c92);
+}
+.modal .modal-dialog .modal-content .modal-body .carousel .carousel-control-next {
+  -webkit-transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  background-image: linear-gradient(to right, transparent, #6a7c92);
+}
+
+.contact-heading a {
+  -webkit-transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  background-color: #ffffff;
+  color: #13dcc2;
+  border-radius: 200px;
+  padding: 1rem 1.5rem;
+  font-size: 14px;
+  text-transform: uppercase;
+  display: inline-block;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
+  max-width: 175px;
+  width: 100%;
+}
+.contact-heading a:hover {
+  background-color: #13dcc2;
+  color: #ffffff;
+}
+
+.info, .otras-cirugias {
+  padding: 3rem 0;
+}
+.info .container .row h4, .otras-cirugias .container .row h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #43576d;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+.info .container .row p, .otras-cirugias .container .row p {
+  font-size: 1rem;
+  color: #43576d;
+  line-height: 2rem;
+  font-weight: 300;
+}
+.info .container .row p a, .otras-cirugias .container .row p a {
+  -webkit-transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  color: #13dcc2;
+  text-decoration: underline;
+}
+.info .container .row p a:hover, .otras-cirugias .container .row p a:hover {
+  color: #45abff;
+  text-decoration: none;
+}
+.info .container .row .intro-img img, .otras-cirugias .container .row .intro-img img {
+  width: 100%;
+}
+.info .container .row .intro-txt, .otras-cirugias .container .row .intro-txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.info .container .row .beneficios, .otras-cirugias .container .row .beneficios {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.info .container .row .aparatos p, .otras-cirugias .container .row .aparatos p {
+  margin-bottom: 1rem;
+}
+.info .container .row .aparatos strong, .otras-cirugias .container .row .aparatos strong {
+  font-weight: 700;
+  color: #13dcc2;
+}
+.info .container .row .aparatos .img-aparatos div, .otras-cirugias .container .row .aparatos .img-aparatos div {
+  justify-content: center;
+  align-content: center;
+  display: flex;
+}
+.info .container .row .aparatos .img-aparatos div img, .otras-cirugias .container .row .aparatos .img-aparatos div img {
+  max-width: 60%;
+  align-self: center;
+}
+.info .container .row .aparatos .datos-doctora, .otras-cirugias .container .row .aparatos .datos-doctora {
+  padding-left: 2rem;
+}
+.info .container .row .aparatos .datos-doctora li svg, .otras-cirugias .container .row .aparatos .datos-doctora li svg {
+  color: #13dcc2;
+  margin-right: 0.5rem;
+}
+.info .container .row .aparatos .datos-doctora li p, .otras-cirugias .container .row .aparatos .datos-doctora li p {
+  display: inline;
+}
+.info .container .row .diagnostico-apnea, .otras-cirugias .container .row .diagnostico-apnea {
+  margin-top: 2rem;
+}
+.info .container .row .diagnostico-apnea .img-container img, .otras-cirugias .container .row .diagnostico-apnea .img-container img {
+  border-radius: 3px;
+  width: 100%;
+}
+.info .container .row .diagnostico-apnea .txt-container p, .otras-cirugias .container .row .diagnostico-apnea .txt-container p {
+  margin-bottom: 1rem;
+}
+.info .container .row .diagnostico-apnea .txt-container h6, .otras-cirugias .container .row .diagnostico-apnea .txt-container h6 {
+  font-size: 1rem;
+  color: #43576d;
+  line-height: 2rem;
+  font-weight: 300;
+  font-weight: 700;
+}
+.info .container .row .diagnostico-apnea .poligrafos, .otras-cirugias .container .row .diagnostico-apnea .poligrafos {
+  margin-top: 2rem;
+}
+.info .container .row .diagnostico-apnea .poligrafos .img-container:first-child, .otras-cirugias .container .row .diagnostico-apnea .poligrafos .img-container:first-child {
+  text-align: right;
+}
+.info .container .row .diagnostico-apnea .poligrafos p, .otras-cirugias .container .row .diagnostico-apnea .poligrafos p {
+  margin-bottom: 1rem;
+  padding: 0;
+}
+.info .container .row .diagnostico-apnea .poligrafos span, .otras-cirugias .container .row .diagnostico-apnea .poligrafos span {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #43576d;
+  line-height: 1.5rem;
+  font-weight: 300;
+  max-width: 380px;
+}
+
+.otras-cirugias {
+  padding: 3rem 0 2rem 0;
+}
+.otras-cirugias .ninios {
+  margin-top: 1rem !important;
+  margin-bottom: 2rem;
+}
+.otras-cirugias .ninios span {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #43576d;
+  line-height: 1.5rem;
+  font-weight: 300;
+  max-width: 380px;
+}
+
+.faqs .search {
+  margin-top: 1.5rem;
+  max-width: 460px;
+}
+.faqs .search #___gcse_0 .gsc-control-cse {
+  background-color: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+}
+.faqs .search #___gcse_0 table.gsc-search-box,
+.faqs .search #___gcse_0 form.gsc-search-box {
+  margin-bottom: 0 !important;
+}
+.faqs .search #___gcse_0 .gsc-search-box-tools .gsc-search-box .gsc-input {
+  padding-right: 0 !important;
+  height: 53px;
+  color: #43576d;
+}
+.faqs .search #___gcse_0 .gsc-input-box {
+  border: none !important;
+  border-top-left-radius: 200px;
+  border-bottom-left-radius: 200px;
+}
+.faqs .search #___gcse_0 .gstl_50 {
+  height: 53px;
+}
+.faqs .search #___gcse_0 .gsc-search-button {
+  margin-left: 0 !important;
+}
+.faqs .search #___gcse_0 .gsib_a {
+  padding: 0 1rem !important;
+}
+.faqs .search #___gcse_0 .gsst_b {
+  padding: 0 !important;
+}
+.faqs .search #___gcse_0 .gsst_b a {
+  padding: 0 1rem !important;
+}
+.faqs .search #___gcse_0 .gsst_b a span {
+  color: #6a7c92 !important;
+  position: relative;
+  top: 3px;
+  -webkit-transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+}
+.faqs .search #___gcse_0 .gsst_b a:hover {
+  background-color: transparent !important;
+}
+.faqs .search #___gcse_0 .gsst_b a:hover span {
+  opacity: 0.6;
+}
+.faqs .search input {
+  -webkit-transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  background-color: rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+  width: 100%;
+  border-radius: 8px;
+  padding: 1rem;
+  font-size: 0.75rem;
+  border: none;
+  box-shadow: none;
+  width: auto;
+  border-top-left-radius: 300px;
+  border-bottom-left-radius: 300px;
+}
+.faqs .search input::-webkit-input-placeholder {
+  color: #ffffff;
+}
+.faqs .search input::-moz-placeholder {
+  color: #ffffff;
+}
+.faqs .search input:-ms-input-placeholder {
+  color: #ffffff;
+}
+.faqs .search input:-moz-placeholder {
+  color: #ffffff;
+}
+.faqs .search button {
+  -webkit-transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  background-color: #13dcc2;
+  color: #ffffff;
+  border-radius: 200px;
+  padding: 1rem 1.5rem;
+  font-size: 14px;
+  text-transform: uppercase;
+  display: inline-block;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.faqs .search button:hover {
+  background-color: #45abff;
+}
+
+.categorias-faqs {
+  padding: 3rem 0 1rem 0;
+  background-color: rgba(235, 248, 254, 0.3);
+}
+.categorias-faqs .container .row h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #43576d;
+  font-weight: 400;
+}
+.categorias-faqs .container .row li .category-card {
+  margin: 2rem 0;
+  box-shadow: 0 8px 20px 0 rgba(224, 224, 224, 0.5);
+  -webkit-transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  background-color: #ffffff;
+  border-radius: 3px;
+  cursor: pointer;
+  border: none;
+  padding: 1rem;
+}
+.categorias-faqs .container .row li .category-card h5 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #6a7c92;
+  font-weight: 400;
+  min-height: 48px;
+}
+.categorias-faqs .container .row li .category-card a {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #13dcc2;
+  letter-spacing: 1px;
+  -webkit-transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  display: block;
+  margin-top: 2rem;
+}
+.categorias-faqs .container .row li .category-card a:hover {
+  color: #45abff;
+}
+.categorias-faqs .container .row li .category-card:hover {
+  box-shadow: 0 18px 28px 0 rgba(201, 201, 201, 0.5);
+}
+
+.contact-form {
+  padding-top: 58px;
+}
+
+.zonas-influencia-contacto {
+  margin-bottom: 3rem;
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1024px) {
+  .services .container .row div .card .txt, .lugares-atencion .container .row div .card .txt {
+    padding: 1rem;
+  }
+
+  .form .container .row .form-container p, .contact-heading .container .row .form-container p {
+    font-size: 1rem;
+  }
+
+  .quienes-somos-excerpt .container .row .txt p {
+    font-size: 0.9rem;
+    line-height: 2rem;
+  }
+
+  .lugares-atencion .container .row div .card .txt h3 {
+    font-size: 1rem;
+    min-height: 38px;
+  }
+  .lugares-atencion .container .row div .card .txt p {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    min-height: 72px;
+  }
+
+  .instituciones .container .row li .row .icon {
+    padding: 0;
+    text-align: right;
+  }
+
+  .staff .container .row div {
+    padding: 0 0.5rem;
+  }
+  .staff .container .row .cv .card .row div a {
+    letter-spacing: 0;
+  }
+
+  .heading .container .row {
+    min-height: 320px;
+  }
+  .heading .container .row p {
+    max-width: 620px;
+  }
+
+  .contact-heading .container .row .form-container h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .categorias-faqs .container .row li .category-card {
+    margin: 1rem 0;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .fadeInOnScroll {
+    visibility: visible !important;
+  }
+
+  .fadeIn {
+    animation-name: none !important;
+  }
+
+  .carousel .carousel-inner .carousel-item .container .row {
+    min-height: 35vh;
+  }
+  .carousel .carousel-inner .carousel-item .container .row .info, .carousel .carousel-inner .carousel-item .container .row .otras-cirugias {
+    padding: 2rem;
+  }
+
+  .services .container .row div .card .txt, .lugares-atencion .container .row div .card .txt {
+    padding: 1rem;
+  }
+  .services .container .row div .card .txt h3, .lugares-atencion .container .row div .card .txt h3 {
+    font-size: 1rem;
+    min-height: 38px;
+  }
+  .services .container .row div .card .txt p, .lugares-atencion .container .row div .card .txt p {
+    font-size: 0.8rem;
+    line-height: 1.4rem;
+    min-height: 132px;
+  }
+
+  .cases .container .row, .heading .container .row {
+    min-height: 320px;
+  }
+  .cases .container .row h2, .heading .container .row h2 {
+    margin-bottom: 0.5rem;
+  }
+  .cases .container .row p, .heading .container .row p {
+    margin-bottom: 1rem;
+  }
+
+  .form .container .row .form-container h2, .contact-heading .container .row .form-container h2 {
+    margin-bottom: 0.5rem;
+  }
+  .form .container .row .form-container p, .contact-heading .container .row .form-container p {
+    font-size: 1rem;
+  }
+
+  footer .container .row .list ul li a {
+    font-size: 0.8rem;
+    line-height: 0;
+  }
+
+  .quienes-somos-excerpt .container .row .txt p {
+    font-size: 0.8rem;
+    line-height: 1.4rem;
+  }
+
+  .lugares-atencion {
+    padding: 3rem 0 2rem 0;
+  }
+  .lugares-atencion .container .row div {
+    margin-bottom: 1rem;
+  }
+  .lugares-atencion .container .row div .card .txt h3 {
+    min-height: auto;
+  }
+  .lugares-atencion .container .row div .card .txt p {
+    min-height: 44px;
+  }
+
+  .instituciones .container .row h2 {
+    font-size: 1.5rem;
+  }
+  .instituciones .container .row li h6 {
+    line-height: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+  .instituciones .container .row li .row .icon {
+    padding: 0;
+    text-align: center;
+  }
+  .instituciones .container .row li .row div {
+    padding-left: 0;
+  }
+
+  .staff .container .row .title {
+    margin-bottom: 1rem;
+  }
+  .staff .container .row .title h2 {
+    font-size: 1.5rem;
+  }
+  .staff .container .row .title p br {
+    display: none;
+  }
+  .staff .container .row .cv .card .row div {
+    padding-right: 0;
+  }
+
+  .otras-cirugias .container .row h4 {
+    font-size: 1rem;
+  }
+
+  .info .container .row h4, .otras-cirugias .container .row h4 {
+    font-size: 1rem;
+  }
+  .info .container .row p, .otras-cirugias .container .row p {
+    font-size: 0.9rem;
+    line-height: 1.6rem;
+  }
+  .info .container .row .aparatos .datos-doctora, .otras-cirugias .container .row .aparatos .datos-doctora {
+    padding-left: 0;
+  }
+  .info .container .row .diagnostico-apnea .row .img-container, .otras-cirugias .container .row .diagnostico-apnea .row .img-container {
+    padding-right: 0;
+  }
+  .info .container .row .diagnostico-apnea .row .txt-container p, .otras-cirugias .container .row .diagnostico-apnea .row .txt-container p {
+    margin-bottom: 0.5rem;
+  }
+
+  .faqs .container .row p {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+  .faqs .search {
+    margin-top: 1rem;
+  }
+
+  .categorias-faqs .container .row li .category-card {
+    margin: 1rem 0;
+  }
+  .categorias-faqs .container .row li .category-card h5 {
+    font-size: 0.9rem;
+    min-height: 36px;
+  }
+  .categorias-faqs .container .row li .category-card a {
+    margin-top: 1rem;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .navbar-light .navbar-toggler {
+    padding: 0;
+    border: none;
+  }
+
+  .navbar-collapse .navbar-nav .nav-item {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #eaeaea;
+  }
+  .navbar-collapse .navbar-nav .nav-item:last-child {
+    border-bottom: none;
+  }
+  .navbar-collapse .navbar-nav .dropdown-menu {
+    border: none;
+  }
+  .navbar-collapse .navbar-nav .dropdown-menu .dropdown-item {
+    padding: 1rem;
+    text-align: center;
+  }
+  .navbar-collapse .navbar-nav .dropdown-menu .dropdown-item:last-child {
+    padding-bottom: 0;
+  }
+  .navbar-collapse .navbar-nav .dropdown-menu .dropdown-item:focus,
+.navbar-collapse .navbar-nav .dropdown-menu .dropdown-item:hover {
+    background-color: transparent;
+  }
+
+  .carousel .carousel-inner .carousel-item .container .row {
+    min-height: 280px;
+  }
+  .carousel .carousel-inner .carousel-item .container .row .info, .carousel .carousel-inner .carousel-item .container .row .otras-cirugias {
+    padding: 2rem 4rem;
+    text-align: center;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    align-self: stretch;
+  }
+  .carousel .carousel-inner .carousel-item .container .row .info h4, .carousel .carousel-inner .carousel-item .container .row .otras-cirugias h4 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .carousel .carousel-inner .carousel-item .container .row .info a, .carousel .carousel-inner .carousel-item .container .row .otras-cirugias a {
+    margin-top: 1rem;
+  }
+
+  .services, .lugares-atencion {
+    padding: 1rem 0 0 0;
+  }
+  .services .container .row .card, .lugares-atencion .container .row .card {
+    margin-bottom: 1rem;
+  }
+  .services .container .row .card .txt, .lugares-atencion .container .row .card .txt {
+    padding: 1rem !important;
+  }
+
+  .cases .container .row, .heading .container .row {
+    min-height: 320px;
+  }
+  .cases .container .row h2, .heading .container .row h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .cases .container .row p, .heading .container .row p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    max-width: 90%;
+  }
+
+  .contact .container {
+    padding: 1rem 0 0 0;
+  }
+  .contact .container .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .contact .container .row div {
+    margin-bottom: 1rem;
+  }
+  .contact .container .row div a {
+    margin-top: 0;
+  }
+
+  .form .container, .contact-heading .container {
+    padding: 1rem 0;
+  }
+  .form .container .row, .contact-heading .container .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .form .container .row .form-container h2, .contact-heading .container .row .form-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .form .container .row .form-container p, .contact-heading .container .row .form-container p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    max-width: 90%;
+    margin: auto;
+  }
+  .form .container .row .form-container form, .contact-heading .container .row .form-container form {
+    margin-top: 0;
+    padding: 1rem 0;
+  }
+
+  footer .container {
+    padding: 1rem 0 0 0;
+  }
+  footer .container .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  footer .container .row div {
+    padding-bottom: 1rem;
+  }
+  footer .container .row .list h5 {
+    margin-bottom: 0.5rem;
+  }
+
+  .heading .container .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .heading .container .row h1 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  .heading .container .row p {
+    margin-bottom: 0;
+  }
+  .heading .container .row p br {
+    display: none;
+  }
+
+  .quienes-somos-excerpt .container {
+    padding: 1rem;
+  }
+
+  .zonas-influencia, .info .container .row .beneficios, .otras-cirugias .container .row .beneficios, .zonas-influencia-contacto {
+    padding: 0 1rem;
+  }
+  .zonas-influencia .container ul li p, .info .container .row .beneficios .container ul li p, .otras-cirugias .container .row .beneficios .container ul li p, .zonas-influencia-contacto .container ul li p {
+    font-size: 0.8rem;
+    line-height: 1.4rem;
+  }
+
+  .lugares-atencion .container h3 {
+    font-size: 1rem;
+  }
+  .lugares-atencion .container h3 br {
+    display: none;
+  }
+  .lugares-atencion .container .row div .card .img {
+    margin-bottom: 0;
+  }
+  .lugares-atencion .container .row div .card .txt {
+    padding: 1rem;
+    margin-bottom: 0;
+  }
+  .lugares-atencion .container .row div .card .txt h3 {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  .instituciones .container {
+    padding: 1rem 0;
+  }
+  .instituciones .container .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .instituciones .container .row h2 {
+    font-size: 1.5rem;
+    text-align: left;
+  }
+  .instituciones .container .row li {
+    margin: 0;
+    padding: 0.5rem;
+  }
+  .instituciones .container .row li .row .icon {
+    text-align: center;
+    padding: 0;
+  }
+
+  .staff {
+    padding: 1rem 0 0 0;
+  }
+  .staff .container .row .title h2 {
+    font-size: 1.5rem;
+  }
+  .staff .container .row .title p {
+    font-size: 1rem;
+  }
+  .staff .container .row .cv {
+    margin-bottom: 1rem;
+  }
+
+  .otros-servicios .container, .casos .container {
+    padding: 1rem;
+  }
+  .otros-servicios .container .row .column p, .casos .container .row .column p {
+    margin-bottom: 0;
+  }
+
+  .preguntas-frecuentes {
+    padding: 1rem 0 0 0;
+  }
+  .preguntas-frecuentes .container .row h1 {
+    font-size: 1.5rem;
+  }
+  .preguntas-frecuentes .container .row h6 {
+    font-size: 0.8rem;
+    max-width: 100%;
+  }
+  .preguntas-frecuentes .container .row .acordion .card .card-header {
+    padding: 1rem 0;
+  }
+  .preguntas-frecuentes .container .row .acordion .card .card-header h5 button {
+    white-space: normal;
+    text-align: left;
+  }
+  .preguntas-frecuentes .container .row .acordion .card .information .card-body {
+    padding: 0;
+  }
+  .preguntas-frecuentes .container .row .acordion .card .information .card-body p {
+    font-size: 0.9rem;
+    line-height: 1.6rem;
+    max-width: 100%;
+  }
+
+  .casos .galeria {
+    margin-top: 1rem;
+  }
+  .casos .galeria li {
+    margin-bottom: 1rem;
+  }
+
+  .info, .otras-cirugias {
+    padding: 1rem 0;
+  }
+  .info .container .row h4, .otras-cirugias .container .row h4 {
+    font-size: 1rem;
+    line-height: 1.4rem;
+  }
+  .info .container .row p, .otras-cirugias .container .row p {
+    font-size: 0.8rem;
+    line-height: 1.6rem;
+  }
+  .info .container .row .intro-img, .otras-cirugias .container .row .intro-img {
+    margin-bottom: 1rem;
+  }
+  .info .container .row .beneficios, .otras-cirugias .container .row .beneficios {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .info .container .row .beneficios .container h3, .otras-cirugias .container .row .beneficios .container h3 {
+    font-size: 1rem;
+  }
+  .info .container .row .aparatos .datos-doctora, .otras-cirugias .container .row .aparatos .datos-doctora {
+    padding-left: 0;
+  }
+  .info .container .row .diagnostico-apnea, .otras-cirugias .container .row .diagnostico-apnea {
+    margin-top: 1rem;
+  }
+  .info .container .row .diagnostico-apnea .poligrafos p, .otras-cirugias .container .row .diagnostico-apnea .poligrafos p {
+    padding: 0 1rem;
+  }
+  .info .container .row .diagnostico-apnea .poligrafos span, .otras-cirugias .container .row .diagnostico-apnea .poligrafos span {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  .info .container .row .diagnostico-apnea .img-container img, .otras-cirugias .container .row .diagnostico-apnea .img-container img {
+    display: none;
+  }
+
+  .otras-cirugias .container .row .diagnostico-apnea {
+    margin-bottom: 0;
+  }
+  .otras-cirugias .container .row .diagnostico-apnea .img-container img {
+    margin-bottom: 0;
+    display: block;
+  }
+  .otras-cirugias .container .row .diagnostico-apnea .img-container span {
+    margin-bottom: 1rem;
+  }
+
+  .contact-heading .container .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .contact-heading .container .row .form-container h2 {
+    font-size: 1.25rem;
+  }
+  .contact-heading .container .row .form-container p {
+    max-width: 100%;
+  }
+
+  .categorias-faqs {
+    padding: 1rem 0;
+  }
+  .categorias-faqs .container .row li .category-card {
+    margin: 0.5rem 0;
+  }
+  .categorias-faqs .container .row li .category-card h5 {
+    font-size: 1rem;
+    min-height: auto;
+  }
+
+  .preguntas-frecuentes .container .row .acordion {
+    margin: 1rem 0;
+  }
+
+  .zonas-influencia-contacto {
+    margin-bottom: 1rem;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+  .carousel .carousel-inner .carousel-item .container .row .info, .carousel .carousel-inner .carousel-item .container .row .otras-cirugias {
+    align-self: center;
+    padding: 1rem;
+    border-radius: 6px;
+  }
+
+  .heading .container .row {
+    min-height: 220px;
+  }
+
+  .quienes-somos-excerpt .container .row .img,
+.quienes-somos-excerpt .container .row .txt {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .lugares-atencion .container .row div .card .txt p {
+    min-height: 72px;
+  }
+
+  .instituciones .container .row li .row h2 {
+    padding: 0 0.5rem;
+  }
+  .instituciones .container .row li .row .icon {
+    display: none;
+  }
+  .instituciones .container .row li .row div {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+  .instituciones .container .row li .row div br {
+    display: none;
+  }
+
+  .staff .container .row .title {
+    margin-bottom: 1rem;
+  }
+  .staff .container .row .title p br {
+    display: none;
+  }
+  .staff .container .row .cv .card {
+    min-height: 170px;
+  }
+  .staff .container .row .cv .card p {
+    font-size: 0.8rem;
+  }
+
+  .info .container .row .diagnostico-apnea .img-container img, .otras-cirugias .container .row .diagnostico-apnea .img-container img {
+    display: block;
+  }
+  .info .container .row .diagnostico-apnea .poligrafos span, .otras-cirugias .container .row .diagnostico-apnea .poligrafos span {
+    margin-bottom: 0;
+    margin-top: 0.5rem;
+  }
+
+  .contact-heading .container .row .form-container p {
+    font-size: 0.8rem;
+  }
+
+  .categorias-faqs .container .row li .category-card h5 {
+    min-height: 58px;
+  }
+  .categorias-faqs .container .row li .category-card a {
+    letter-spacing: 0;
+    margin-top: 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

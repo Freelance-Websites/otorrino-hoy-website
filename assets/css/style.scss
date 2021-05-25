@@ -1,0 +1,2572 @@
+//typeface
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
+
+//colors
+$white: #ffffff;
+$sky: #f9fcfe;
+$green: #13dcc2;
+$light-blue: #45abff;
+$dark-blue: #43576d;
+$gray: #6a7c92;
+
+//general styles & overrides
+* {
+  font-family: "Lato", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+label {
+  margin: 0;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.fadeInOnScroll {
+  visibility: hidden;
+}
+
+.fadeIn {
+  visibility: visible !important;
+}
+
+// selection styles
+::-moz-selection {
+  background: $green;
+  color: $white;
+}
+::selection {
+  background: $green;
+  color: $white;
+}
+
+//gradients
+@mixin gradient {
+  background-image: linear-gradient(to right, $light-blue, $green);
+}
+
+//title styles
+@mixin title-big($color) {
+  font-size: 2.5rem;
+  color: $color;
+}
+
+@mixin title-medium($color) {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: $color;
+}
+
+@mixin title-small($color) {
+  color: $color;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+//text styles
+@mixin text-big($color) {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: $color;
+}
+
+@mixin text-medium($color) {
+  font-size: 1rem;
+  color: $color;
+  line-height: 2rem;
+  font-weight: 300;
+}
+
+@mixin text-small($color) {
+  font-size: 0.9rem;
+  color: $color;
+  line-height: 1.5rem;
+}
+
+@mixin text-uppercase($color) {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: $color;
+  letter-spacing: 1px;
+}
+
+//transitions and animations
+@mixin transition {
+  -webkit-transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out,
+    background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out,
+    background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+}
+
+//backgrounds
+@mixin bg-cover {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+//shadows
+@mixin drop-shadow-dp1 {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.16);
+}
+
+@mixin drop-shadow-dp2 {
+  box-shadow: 0 8px 20px 0 rgba(224, 224, 224, 0.5);
+}
+
+@mixin drop-shadow-dp3 {
+  box-shadow: 0 18px 28px 0 rgba(201, 201, 201, 0.5);
+}
+
+//ctas
+@mixin filled-cta($background-color, $text-color) {
+  @include transition;
+  background-color: $background-color;
+  color: $text-color;
+  border-radius: 200px;
+  padding: 1rem 1.5rem;
+  font-size: 14px;
+  text-transform: uppercase;
+  display: inline-block;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+}
+
+//inputs
+@mixin input($background-color, $text-color) {
+  @include transition;
+  background-color: $background-color;
+  color: $text-color;
+  width: 100%;
+  border-radius: 8px;
+  padding: 1rem;
+  font-size: 0.75rem;
+  border: none;
+  box-shadow: none;
+}
+
+@mixin textarea($background-color, $text-color) {
+  @include transition;
+  background-color: $background-color;
+  color: $text-color;
+  width: 100%;
+  border-radius: 8px;
+  padding: 1rem;
+  font-size: 0.75rem;
+  resize: none;
+  border: none;
+  height: 90px;
+}
+
+@mixin select($text-color) {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  @include transition;
+  color: $text-color;
+  width: 100%;
+  border-radius: 8px;
+  padding: 1rem;
+  font-size: 0.75rem;
+  border: none;
+  box-shadow: none;
+}
+
+// animations
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+//header
+header {
+  @include drop-shadow-dp1;
+  position: fixed;
+  width: 100%;
+  background-color: $white;
+  z-index: 999;
+
+  //logo
+  .navbar-brand {
+    margin-right: 0;
+
+    img {
+      max-width: 100%;
+      @include transition;
+    }
+
+    &:hover {
+      img {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  //nav
+  .navbar-collapse {
+    .navbar-nav {
+      .nav-item {
+        .nav-link {
+          @include transition;
+          @include text-uppercase($dark-blue);
+          padding: 0 0.75rem;
+
+          &:hover {
+            color: $green;
+          }
+        }
+
+        .active {
+          color: $green;
+        }
+      }
+    }
+  }
+
+  //dropdown menu
+  .dropdown-menu {
+    top: 38px;
+    margin: 0;
+    border-top: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding: 0;
+
+    .dropdown-item {
+      @include text-uppercase($dark-blue);
+      text-transform: none;
+      padding: 0.5rem 1rem;
+    }
+  }
+}
+
+//slider home
+.carousel {
+  position: relative;
+  padding-top: 58px;
+
+  .carousel-inner {
+    .carousel-item {
+      @include bg-cover;
+
+      .container {
+        .row {
+          min-height: 60vh;
+          align-items: flex-end;
+
+          .info {
+            @include gradient;
+            opacity: 0.9;
+            padding: 4rem;
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+
+            h4 {
+              @include title-medium($white);
+              margin-bottom: 1rem;
+            }
+
+            p {
+              @include text-small($white);
+            }
+
+            a {
+              @include filled-cta($white, $light-blue);
+              margin-top: 2rem;
+
+              &:hover {
+                background-color: $green;
+                color: $white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//services
+.services {
+  padding: 3rem 0;
+
+  .container {
+    .row {
+      div {
+        .card {
+          @include drop-shadow-dp2;
+          @include transition;
+          background-color: $white;
+          border-radius: 3px;
+          cursor: pointer;
+          border: none;
+
+          .img {
+            img {
+              width: 100%;
+              border-top-left-radius: 3px;
+              border-top-right-radius: 3px;
+            }
+
+            hr {
+              margin: 0;
+              height: 6px;
+              width: 100%;
+              @include gradient;
+            }
+          }
+
+          .txt {
+            padding: 1.5rem;
+
+            h3 {
+              @include title-medium($dark-blue);
+              margin-bottom: 0.5rem;
+              font-weight: 400;
+            }
+
+            p {
+              @include text-small($dark-blue);
+            }
+
+            a {
+              @include text-uppercase($green);
+              @include transition;
+              display: inline-block;
+              padding-top: 1rem;
+
+              &:hover {
+                color: $light-blue;
+              }
+            }
+          }
+
+          &:hover {
+            @include drop-shadow-dp3;
+          }
+        }
+      }
+    }
+  }
+}
+
+//cases
+.cases {
+  @include bg-cover;
+
+  .container {
+    .row {
+      min-height: 420px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      h2 {
+        @include title-big($white);
+        margin-bottom: 1rem;
+      }
+
+      p {
+        @include text-big($white);
+        margin-bottom: 2rem;
+        max-width: 680px;
+      }
+
+      a {
+        @include filled-cta($white, $green);
+
+        &:hover {
+          background-color: $green;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+//contact
+.contact {
+  .container {
+    padding: 2rem 0;
+
+    .row {
+      div {
+        text-align: center;
+
+        img {
+          max-width: 100%;
+          margin-bottom: 1rem;
+        }
+
+        h5 {
+          @include title-medium($dark-blue);
+          font-weight: 400;
+        }
+
+        p {
+          @include text-small($gray);
+        }
+
+        a {
+          @include text-small($green);
+          text-decoration: underline;
+          display: inline-block;
+          margin-top: 0.5rem;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+// form
+.form {
+  @include gradient;
+
+  .container {
+    padding: 3rem 0;
+
+    .row {
+      text-align: center;
+
+      .form-container {
+        h2 {
+          @include title-big($white);
+          margin-bottom: 1rem;
+        }
+
+        p {
+          @include text-big($white);
+        }
+
+        form {
+          margin-top: 2rem;
+
+          div {
+            input:not([type="submit"]) {
+              @include input(rgba(255, 255, 255, 0.4), $white);
+              margin: 0.5rem 0;
+
+              &::-webkit-input-placeholder {
+                color: $white;
+              }
+
+              &::-moz-placeholder {
+                color: $white;
+              }
+
+              &:-ms-input-placeholder {
+                color: $white;
+              }
+
+              &:-moz-placeholder {
+                color: $white;
+              }
+            }
+
+            textarea {
+              @include textarea(rgba(255, 255, 255, 0.4), $white);
+              margin: 0.5rem 0;
+
+              &::-webkit-input-placeholder {
+                color: $white;
+              }
+
+              &::-moz-placeholder {
+                color: $white;
+              }
+
+              &:-ms-input-placeholder {
+                color: $white;
+              }
+
+              &:-moz-placeholder {
+                color: $white;
+              }
+            }
+
+            select {
+              @include select($white);
+              background: url("data:image/svg+xml;utf8,<svg fill='#FFF' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'> <path d='M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z'/> <path d='M0-.75h24v24H0z' fill='none'/> </svg>"),
+                rgba(255, 255, 255, 0.4);
+              background-repeat: no-repeat;
+              background-position: 98%;
+              margin: 0.5rem 0;
+
+              &::-webkit-input-placeholder {
+                color: $white;
+              }
+
+              &::-moz-placeholder {
+                color: $white;
+              }
+
+              &:-ms-input-placeholder {
+                color: $white;
+              }
+
+              &:-moz-placeholder {
+                color: $white;
+              }
+            }
+
+            .g-recaptcha {
+              margin-bottom: 0.5rem;
+            }
+
+            input[type="submit"] {
+              @include filled-cta($green, $white);
+              border-radius: 8px;
+              min-width: 120px;
+
+              &:hover {
+                background-color: $light-blue;
+              }
+            }
+
+            .parsley-error {
+              background-color: rgba(255, 0, 0, 0.4) !important;
+              animation-name: shake;
+              animation-duration: 0.8s;
+              animation-fill-mode: both;
+            }
+
+            .parsley-errors-list {
+              @include text-uppercase(red);
+              text-align: right;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// footer
+footer {
+  background-color: $dark-blue;
+
+  .container {
+    padding: 3rem 0;
+
+    .row {
+      .logo {
+        img {
+          max-width: 100%;
+          margin-bottom: 0.5rem;
+        }
+
+        p {
+          @include text-small($gray);
+          margin: 0.5rem 0;
+
+          a {
+            @include transition;
+            color: $green;
+
+            &:hover {
+              color: $light-blue;
+            }
+          }
+        }
+      }
+
+      .list {
+        h5 {
+          @include text-uppercase($white);
+          margin-bottom: 1rem;
+        }
+
+        ul {
+          li {
+            margin: 0.5rem 0;
+
+            a {
+              @include text-small($gray);
+              @include transition;
+
+              &:hover {
+                color: $green;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// quienes somos
+.heading {
+  @extend .cases;
+  padding-top: 58px;
+
+  .container {
+    .row {
+      h1 {
+        color: $white;
+        font-weight: 300;
+      }
+
+      p {
+        margin-bottom: 0;
+        opacity: 0.8;
+        max-width: 680px;
+      }
+    }
+  }
+}
+
+.quienes-somos-excerpt {
+  .container {
+    padding: 3rem 0;
+
+    .row {
+      .img {
+        img {
+          width: 100%;
+          border-radius: 8px;
+        }
+      }
+
+      .txt {
+        p {
+          @include text-medium($gray);
+          margin: 0.5rem 0;
+        }
+      }
+    }
+  }
+}
+
+.zonas-influencia {
+  .container {
+    background-color: rgba(19, 220, 194, 0.06);
+    border: 1px solid $green;
+    border-radius: 6px;
+    padding: 1rem;
+
+    h3 {
+      @include title-medium($dark-blue);
+    }
+
+    ul {
+      margin-top: 1rem;
+
+      li {
+        margin: 0.5rem 0;
+
+        svg {
+          color: $green;
+        }
+
+        p {
+          @include text-medium($gray);
+          display: inline;
+          margin: 0 0.5rem;
+
+          strong {
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}
+
+.lugares-atencion {
+  @extend .services;
+
+  .container {
+    h3 {
+      @include title-medium($dark-blue);
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.instituciones {
+  @include bg-cover;
+  background-image: url("../img/bg/bg-instituciones.jpg");
+
+  .container {
+    padding: 3rem 0;
+    min-height: 420px;
+    text-align: center;
+
+    .row {
+      h2 {
+        @include title-big($white);
+        margin-bottom: 0.5rem;
+      }
+
+      li {
+        margin: 1rem 0;
+        text-align: left;
+
+        h6 {
+          @include text-small($white);
+          font-weight: 700;
+          font-size: 13px;
+        }
+
+        .row {
+          p {
+            @include text-small($white);
+            font-size: 13px;
+          }
+
+          .icon {
+            svg {
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.staff {
+  padding: 3rem 0;
+
+  .container {
+    .row {
+      .title {
+        h2 {
+          @include title-big($green);
+        }
+
+        p {
+          @include text-medium($gray);
+          font-size: 18px;
+          line-height: 1.4rem;
+        }
+      }
+
+      .cv {
+        .card {
+          @include drop-shadow-dp2;
+          @include transition;
+          background-color: $white;
+          border-radius: 3px;
+          cursor: pointer;
+          border: none;
+          padding: 1rem;
+
+          h4 {
+            @include title-medium($dark-blue);
+            font-weight: 400;
+          }
+
+          p {
+            @include text-medium($gray);
+          }
+
+          .row {
+            div {
+              padding-top: 1rem;
+
+              a {
+                @include text-uppercase($green);
+                @include transition;
+
+                &:hover {
+                  color: $light-blue;
+                }
+              }
+            }
+          }
+
+          &:hover {
+            @include drop-shadow-dp3;
+          }
+        }
+      }
+    }
+  }
+}
+
+// services
+.otros-servicios {
+  background-color: $sky;
+  .container {
+    padding: 3rem 0 2rem 0;
+
+    .row {
+      h4 {
+        @include title-medium($dark-blue);
+        font-weight: 400;
+      }
+
+      .column {
+        margin-top: 1rem;
+
+        p {
+          @include text-medium($dark-blue);
+          margin-bottom: 1rem;
+
+          a {
+            @include transition;
+            color: $green;
+
+            &:hover {
+              color: $light-blue;
+            }
+          }
+        }
+
+        h6 {
+          @include text-medium($dark-blue);
+          font-weight: 700;
+          margin-bottom: 1rem;
+        }
+
+        ul {
+          list-style: disc;
+          padding-left: 1rem;
+
+          li {
+            @include text-medium($dark-blue);
+            margin-bottom: 1rem;
+
+            a {
+              color: $green;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// rinoplastia
+.preguntas-frecuentes {
+  padding: 3rem 0;
+
+  .container {
+    .row {
+      h1 {
+        @include title-big($green);
+        margin-bottom: 0.5rem;
+      }
+
+      h6 {
+        @include text-big($dark-blue);
+        max-width: 620px;
+      }
+
+      .acordion {
+        margin: 1.5rem 0;
+
+        .card {
+          background-color: transparent;
+          border-radius: 0;
+          border: none;
+          border-top: 1px solid #eaeaea;
+
+          .card-header:first-child {
+            border-radius: 0;
+          }
+
+          .card-header {
+            background-color: transparent;
+            border-bottom: none;
+            padding: 1rem;
+
+            h5 {
+              @include text-big($dark-blue);
+
+              button {
+                @include transition;
+                color: $dark-blue;
+                border: none;
+                padding: 0;
+                font-weight: 300;
+
+                &:hover,
+                &:focus {
+                  opacity: 0.6;
+                  text-decoration: none;
+                }
+              }
+
+              svg {
+                color: $green;
+                margin-right: 0.5rem;
+              }
+            }
+          }
+
+          .information {
+            .card-body {
+              padding: 1rem;
+
+              p {
+                @include text-medium($dark-blue);
+              }
+
+              a {
+                color: $green;
+                @include transition;
+
+                &:hover {
+                  opacity: 0.6;
+                }
+              }
+
+              ul,
+              ol {
+                margin: 1rem 0;
+                list-style-type: disc;
+                padding-left: 2rem;
+
+                li {
+                  @include text-medium($dark-blue);
+                }
+              }
+
+              blockquote {
+                @include text-big($dark-blue);
+                padding-left: 2rem;
+                font-style: italic;
+                margin: 2rem 0;
+                border-left: 3px solid $green;
+              }
+
+              .image {
+                margin: 1rem;
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// casos clinicos
+.casos {
+  @extend .otros-servicios;
+
+  .galeria {
+    margin-top: 1.5rem;
+
+    li {
+      margin-bottom: 2rem;
+
+      a {
+        display: block;
+        position: relative;
+
+        .overlay {
+          @include transition;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          @include gradient;
+          opacity: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+
+          h6 {
+            @include title-small($white);
+            margin-bottom: 0.25rem;
+          }
+
+          p {
+            @include text-uppercase($white);
+          }
+        }
+
+        img {
+          border-radius: 3px;
+          width: 100%;
+        }
+
+        &:hover {
+          .overlay {
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+
+    .paginator {
+      @include filled-cta($green, $white);
+      @include transition;
+      margin: auto;
+
+      &:hover {
+        background-color: $light-blue;
+      }
+    }
+  }
+}
+
+// modal casos
+.modal {
+  background-color: rgba(67, 87, 109, 0.96);
+
+  .close {
+    padding: 1rem;
+    @include transition;
+    opacity: 1;
+
+    svg {
+      color: $white;
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  .modal-dialog {
+    .modal-content {
+      background-color: transparent;
+      border: none;
+
+      .modal-header {
+        padding: 1rem 0;
+        border-bottom: none;
+
+        h5 {
+          @include title-medium($white);
+          font-weight: 300;
+        }
+      }
+
+      .modal-body {
+        padding: 0;
+
+        .carousel {
+          padding-top: 0;
+
+          .carousel-inner {
+            .carousel-item {
+              .form-row {
+                div {
+                  position: relative;
+                  background-color: $white;
+
+                  img {
+                    width: 100%;
+                  }
+
+                  p {
+                    border: 1px solid $white;
+                    border-radius: 3px;
+                    background-color: rgba(255, 255, 255, 0.1);
+                    padding: 0.5rem 1rem;
+                    @include text-uppercase($white);
+                    position: absolute;
+                    bottom: 1rem;
+                    left: 1rem;
+                  }
+                }
+
+                .antes {
+                  padding-left: 0;
+                }
+
+                .despues {
+                  padding-right: 0;
+                }
+              }
+            }
+          }
+
+          .carousel-control-prev {
+            @include transition;
+            background-image: linear-gradient(to left, transparent, $gray);
+          }
+
+          .carousel-control-next {
+            @include transition;
+            background-image: linear-gradient(to right, transparent, $gray);
+          }
+        }
+      }
+    }
+  }
+}
+
+// contact heading
+.contact-heading {
+  @extend .form;
+
+  a {
+    @include filled-cta($white, $green);
+    margin-top: 1rem;
+    max-width: 175px;
+    width: 100%;
+
+    &:hover {
+      background-color: $green;
+      color: $white;
+    }
+  }
+}
+
+// apnea
+.info {
+  padding: 3rem 0;
+
+  .container {
+    .row {
+      h4 {
+        @include title-medium($dark-blue);
+        margin-bottom: 0.5rem;
+        font-weight: 400;
+      }
+
+      p {
+        @include text-medium($dark-blue);
+
+        a {
+          @include transition;
+          color: $green;
+          text-decoration: underline;
+
+          &:hover {
+            color: $light-blue;
+            text-decoration: none;
+          }
+        }
+      }
+
+      .intro-img {
+        img {
+          width: 100%;
+        }
+      }
+
+      .intro-txt {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .beneficios {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        @extend .zonas-influencia;
+      }
+
+      .aparatos {
+        p {
+          margin-bottom: 1rem;
+        }
+
+        strong {
+          font-weight: 700;
+          color: $green;
+        }
+
+        .img-aparatos {
+          div {
+            justify-content: center;
+            align-content: center;
+            display: flex;
+
+            img {
+              max-width: 60%;
+              align-self: center;
+            }
+          }
+        }
+
+        .datos-doctora {
+          padding-left: 2rem;
+
+          li {
+            svg {
+              color: $green;
+              margin-right: 0.5rem;
+            }
+
+            p {
+              display: inline;
+            }
+          }
+        }
+      }
+
+      .diagnostico-apnea {
+        margin-top: 2rem;
+
+        .img-container {
+          img {
+            border-radius: 3px;
+            width: 100%;
+          }
+        }
+
+        .txt-container {
+          p {
+            margin-bottom: 1rem;
+          }
+
+          h6 {
+            @include text-medium($dark-blue);
+            font-weight: 700;
+          }
+        }
+
+        .poligrafos {
+          margin-top: 2rem;
+
+          .img-container:first-child {
+            text-align: right;
+          }
+
+          p {
+            margin-bottom: 1rem;
+            padding: 0;
+          }
+
+          span {
+            display: block;
+            margin-top: 0.5rem;
+            @include text-small($dark-blue);
+            font-weight: 300;
+            max-width: 380px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.otras-cirugias {
+  @extend .info;
+  padding: 3rem 0 2rem 0;
+
+  .ninios {
+    margin-top: 1rem !important;
+    margin-bottom: 2rem;
+
+    span {
+      display: block;
+      margin-top: 0.5rem;
+      @include text-small($dark-blue);
+      font-weight: 300;
+      max-width: 380px;
+    }
+  }
+}
+
+// preguntas frecuentes
+.faqs {
+  .search {
+    margin-top: 1.5rem;
+    max-width: 460px;
+
+    // google custom search fix
+    #___gcse_0 {
+      .gsc-control-cse {
+        background-color: transparent !important;
+        border: none !important;
+        padding: 0 !important;
+      }
+
+      table.gsc-search-box,
+      form.gsc-search-box {
+        margin-bottom: 0 !important;
+      }
+
+      .gsc-search-box-tools .gsc-search-box .gsc-input {
+        padding-right: 0 !important;
+        height: 53px;
+        color: $dark-blue;
+      }
+
+      .gsc-input-box {
+        border: none !important;
+        border-top-left-radius: 200px;
+        border-bottom-left-radius: 200px;
+      }
+
+      .gstl_50 {
+        height: 53px;
+      }
+
+      .gsc-search-button {
+        margin-left: 0 !important;
+      }
+
+      .gsib_a {
+        padding: 0 1rem !important;
+      }
+
+      .gsst_b {
+        padding: 0 !important;
+
+        a {
+          padding: 0 1rem !important;
+
+          span {
+            color: $gray !important;
+            position: relative;
+            top: 3px;
+            @include transition;
+          }
+
+          &:hover {
+            background-color: transparent !important;
+
+            span {
+              opacity: 0.6;
+            }
+          }
+        }
+      }
+    }
+
+    input {
+      @include input(rgba(255, 255, 255, 0.4), $white);
+      width: auto;
+      border-top-left-radius: 300px;
+      border-bottom-left-radius: 300px;
+
+      &::-webkit-input-placeholder {
+        color: $white;
+      }
+
+      &::-moz-placeholder {
+        color: $white;
+      }
+
+      &:-ms-input-placeholder {
+        color: $white;
+      }
+
+      &:-moz-placeholder {
+        color: $white;
+      }
+    }
+
+    button {
+      @include filled-cta($green, $white);
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+
+      &:hover {
+        background-color: $light-blue;
+      }
+    }
+  }
+}
+
+.categorias-faqs {
+  padding: 3rem 0 1rem 0;
+  background-color: rgba(235, 248, 254, 0.3);
+
+  .container {
+    .row {
+      h2 {
+        @include title-medium($dark-blue);
+        font-weight: 400;
+      }
+
+      li {
+        .category-card {
+          margin: 2rem 0;
+          @include drop-shadow-dp2;
+          @include transition;
+          background-color: $white;
+          border-radius: 3px;
+          cursor: pointer;
+          border: none;
+          padding: 1rem;
+
+          h5 {
+            @include title-medium($gray);
+            font-weight: 400;
+            min-height: 48px;
+          }
+
+          a {
+            @include text-uppercase($green);
+            @include transition;
+            display: block;
+            margin-top: 2rem;
+
+            &:hover {
+              color: $light-blue;
+            }
+          }
+
+          &:hover {
+            @include drop-shadow-dp3;
+          }
+        }
+      }
+    }
+  }
+}
+
+// contact
+.contact-form {
+  padding-top: 58px;
+}
+
+.zonas-influencia-contacto {
+  @extend .zonas-influencia;
+  margin-bottom: 3rem;
+}
+
+// 993 - 1024 resolution
+@media only screen and (min-width: 993px) and (max-width: 1024px) {
+  // services home
+  .services {
+    .container {
+      .row {
+        div {
+          .card {
+            .txt {
+              padding: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // contact form
+  .form {
+    .container {
+      .row {
+        .form-container {
+          p {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  // quienes somos
+  .quienes-somos-excerpt {
+    .container {
+      .row {
+        .txt {
+          p {
+            font-size: 0.9rem;
+            line-height: 2rem;
+          }
+        }
+      }
+    }
+  }
+
+  .lugares-atencion {
+    .container {
+      .row {
+        div {
+          .card {
+            .txt {
+              h3 {
+                font-size: 1rem;
+                min-height: 38px;
+              }
+
+              p {
+                font-size: 0.8rem;
+                line-height: 1.5rem;
+                min-height: 72px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .instituciones {
+    .container {
+      .row {
+        li {
+          .row {
+            .icon {
+              padding: 0;
+              text-align: right;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .staff {
+    .container {
+      .row {
+        div {
+          padding: 0 0.5rem;
+        }
+
+        .cv {
+          .card {
+            .row {
+              div {
+                a {
+                  letter-spacing: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .heading {
+    .container {
+      .row {
+        min-height: 320px;
+
+        p {
+          max-width: 620px;
+        }
+      }
+    }
+  }
+
+  .contact-heading {
+    .container {
+      .row {
+        .form-container {
+          h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  // faqs
+  .categorias-faqs {
+    .container {
+      .row {
+        li {
+          .category-card {
+            margin: 1rem 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 768 - 992 resolution
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  // scroll animations
+  .fadeInOnScroll {
+    visibility: visible !important;
+  }
+
+  .fadeIn {
+    animation-name: none !important;
+  }
+
+  // carousel
+  .carousel {
+    .carousel-inner {
+      .carousel-item {
+        .container {
+          .row {
+            min-height: 35vh;
+
+            .info {
+              padding: 2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // servicios
+  .services {
+    .container {
+      .row {
+        div {
+          .card {
+            .txt {
+              padding: 1rem;
+
+              h3 {
+                font-size: 1rem;
+                min-height: 38px;
+              }
+
+              p {
+                font-size: 0.8rem;
+                line-height: 1.4rem;
+                min-height: 132px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // cases
+  .cases {
+    .container {
+      .row {
+        min-height: 320px;
+
+        h2 {
+          margin-bottom: 0.5rem;
+        }
+
+        p {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+
+  // contact form home
+  .form {
+    .container {
+      .row {
+        .form-container {
+          h2 {
+            margin-bottom: 0.5rem;
+          }
+
+          p {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  // footer
+  footer {
+    .container {
+      .row {
+        .list {
+          ul {
+            li {
+              a {
+                font-size: 0.8rem;
+                line-height: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // quienes somos
+  .quienes-somos-excerpt {
+    .container {
+      .row {
+        .txt {
+          p {
+            font-size: 0.8rem;
+            line-height: 1.4rem;
+          }
+        }
+      }
+    }
+  }
+
+  .lugares-atencion {
+    padding: 3rem 0 2rem 0;
+
+    .container {
+      .row {
+        div {
+          margin-bottom: 1rem;
+
+          .card {
+            .txt {
+              h3 {
+                min-height: auto;
+              }
+
+              p {
+                min-height: 44px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .instituciones {
+    .container {
+      .row {
+        h2 {
+          font-size: 1.5rem;
+        }
+
+        li {
+          h6 {
+            line-height: 1.3rem;
+            margin-bottom: 0.5rem;
+          }
+
+          .row {
+            .icon {
+              padding: 0;
+              text-align: center;
+            }
+
+            div {
+              padding-left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .staff {
+    .container {
+      .row {
+        .title {
+          margin-bottom: 1rem;
+
+          h2 {
+            font-size: 1.5rem;
+          }
+
+          p {
+            br {
+              display: none;
+            }
+          }
+        }
+
+        .cv {
+          .card {
+            .row {
+              div {
+                padding-right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .otras-cirugias {
+    .container {
+      .row {
+        h4 {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  // apnea sueño
+  .info {
+    .container {
+      .row {
+        h4 {
+          font-size: 1rem;
+        }
+
+        p {
+          font-size: 0.9rem;
+          line-height: 1.6rem;
+        }
+
+        .aparatos {
+          .datos-doctora {
+            padding-left: 0;
+          }
+        }
+
+        .diagnostico-apnea {
+          .row {
+            .img-container {
+              padding-right: 0;
+            }
+
+            .txt-container {
+              p {
+                margin-bottom: 0.5rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // preguntas frecuentes
+  .faqs {
+    .container {
+      .row {
+        p {
+          margin-bottom: 0.5rem;
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .search {
+      margin-top: 1rem;
+    }
+  }
+
+  .categorias-faqs {
+    .container {
+      .row {
+        li {
+          .category-card {
+            margin: 1rem 0;
+
+            h5 {
+              font-size: 0.9rem;
+              min-height: 36px;
+            }
+
+            a {
+              margin-top: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// 320 - 767 resolution
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  // nav
+  .navbar-light {
+    .navbar-toggler {
+      padding: 0;
+      border: none;
+    }
+  }
+
+  .navbar-collapse {
+    .navbar-nav {
+      .nav-item {
+        padding: 1rem;
+        text-align: center;
+        border-bottom: 1px solid #eaeaea;
+      }
+
+      .nav-item:last-child {
+        border-bottom: none;
+      }
+
+      .dropdown-menu {
+        border: none;
+
+        .dropdown-item {
+          padding: 1rem;
+          text-align: center;
+        }
+
+        .dropdown-item:last-child {
+          padding-bottom: 0;
+        }
+
+        .dropdown-item:focus,
+        .dropdown-item:hover {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  // carousel
+  .carousel {
+    .carousel-inner {
+      .carousel-item {
+        .container {
+          .row {
+            min-height: 280px;
+
+            .info {
+              padding: 2rem 4rem;
+              text-align: center;
+              border-top-left-radius: 0;
+              border-top-right-radius: 0;
+              align-self: stretch;
+
+              h4 {
+                font-size: 1rem;
+                margin-bottom: 0.5rem;
+              }
+
+              a {
+                margin-top: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // services
+  .services {
+    padding: 1rem 0 0 0;
+
+    .container {
+      .row {
+        .card {
+          margin-bottom: 1rem;
+
+          .txt {
+            padding: 1rem !important;
+          }
+        }
+      }
+    }
+  }
+
+  // cases
+  .cases {
+    .container {
+      .row {
+        min-height: 320px;
+
+        h2 {
+          font-size: 1.5rem;
+          margin-bottom: 0.5rem;
+        }
+
+        p {
+          font-size: 1rem;
+          margin-bottom: 1rem;
+          max-width: 90%;
+        }
+      }
+    }
+  }
+
+  // contact
+  .contact {
+    .container {
+      padding: 1rem 0 0 0;
+
+      .row {
+        margin-left: 0;
+        margin-right: 0;
+
+        div {
+          margin-bottom: 1rem;
+
+          a {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+
+  // form contacto
+  .form {
+    .container {
+      padding: 1rem 0;
+
+      .row {
+        margin-left: 0;
+        margin-right: 0;
+
+        .form-container {
+          h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+          }
+
+          p {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            max-width: 90%;
+            margin: auto;
+          }
+
+          form {
+            margin-top: 0;
+            padding: 1rem 0;
+          }
+        }
+      }
+    }
+  }
+
+  // footer
+  footer {
+    .container {
+      padding: 1rem 0 0 0;
+
+      .row {
+        margin-left: 0;
+        margin-right: 0;
+
+        div {
+          padding-bottom: 1rem;
+        }
+
+        .list {
+          h5 {
+            margin-bottom: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  // heading
+  .heading {
+    .container {
+      .row {
+        margin-left: 0;
+        margin-right: 0;
+
+        h1 {
+          font-size: 1.25rem;
+          margin-bottom: 0.5rem;
+        }
+
+        p {
+          margin-bottom: 0;
+
+          br {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  // quienes somos
+  .quienes-somos-excerpt {
+    .container {
+      padding: 1rem;
+    }
+  }
+
+  .zonas-influencia {
+    padding: 0 1rem;
+
+    .container {
+      ul {
+        li {
+          p {
+            font-size: 0.8rem;
+            line-height: 1.4rem;
+          }
+        }
+      }
+    }
+  }
+
+  .lugares-atencion {
+    .container {
+      h3 {
+        font-size: 1rem;
+
+        br {
+          display: none;
+        }
+      }
+
+      .row {
+        div {
+          .card {
+            .img {
+              margin-bottom: 0;
+            }
+
+            .txt {
+              padding: 1rem;
+              margin-bottom: 0;
+
+              h3 {
+                font-size: 1rem;
+                font-weight: 700;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .instituciones {
+    .container {
+      padding: 1rem 0;
+
+      .row {
+        margin-left: 0;
+        margin-right: 0;
+
+        h2 {
+          font-size: 1.5rem;
+          text-align: left;
+        }
+
+        li {
+          margin: 0;
+          padding: 0.5rem;
+
+          .row {
+            .icon {
+              text-align: center;
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .staff {
+    padding: 1rem 0 0 0;
+
+    .container {
+      .row {
+        .title {
+          h2 {
+            font-size: 1.5rem;
+          }
+
+          p {
+            font-size: 1rem;
+          }
+        }
+
+        .cv {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+
+  // services
+  .otros-servicios {
+    .container {
+      padding: 1rem;
+
+      .row {
+        .column {
+          p {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  // preguntas
+  .preguntas-frecuentes {
+    padding: 1rem 0 0 0;
+
+    .container {
+      .row {
+        h1 {
+          font-size: 1.5rem;
+        }
+
+        h6 {
+          font-size: 0.8rem;
+          max-width: 100%;
+        }
+
+        .acordion {
+          .card {
+            .card-header {
+              padding: 1rem 0;
+
+              h5 {
+                button {
+                  white-space: normal;
+                  text-align: left;
+                }
+              }
+            }
+
+            .information {
+              .card-body {
+                padding: 0;
+
+                p {
+                  font-size: 0.9rem;
+                  line-height: 1.6rem;
+                  max-width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // casos
+  .casos {
+    .galeria {
+      margin-top: 1rem;
+
+      li {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  // apnea
+  .info {
+    padding: 1rem 0;
+
+    .container {
+      .row {
+        h4 {
+          font-size: 1rem;
+          line-height: 1.4rem;
+        }
+
+        p {
+          font-size: 0.8rem;
+          line-height: 1.6rem;
+        }
+
+        .intro-img {
+          margin-bottom: 1rem;
+        }
+
+        .beneficios {
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+
+          .container {
+            h3 {
+              font-size: 1rem;
+            }
+          }
+        }
+
+        .aparatos {
+          .datos-doctora {
+            padding-left: 0;
+          }
+        }
+
+        .diagnostico-apnea {
+          margin-top: 1rem;
+
+          .poligrafos {
+            p {
+              padding: 0 1rem;
+            }
+
+            span {
+              margin-top: 0;
+              margin-bottom: 1rem;
+            }
+          }
+
+          .img-container {
+            img {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .otras-cirugias {
+    .container {
+      .row {
+        .diagnostico-apnea {
+          margin-bottom: 0;
+
+          .img-container {
+            img {
+              margin-bottom: 0;
+              display: block;
+            }
+
+            span {
+              margin-bottom: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .contact-heading {
+    .container {
+      .row {
+        margin-left: 0;
+        margin-right: 0;
+
+        .form-container {
+          h2 {
+            font-size: 1.25rem;
+          }
+
+          p {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  // preguntas frecuentes
+  .categorias-faqs {
+    padding: 1rem 0;
+
+    .container {
+      .row {
+        li {
+          .category-card {
+            margin: 0.5rem 0;
+
+            h5 {
+              font-size: 1rem;
+              min-height: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .preguntas-frecuentes {
+    .container {
+      .row {
+        .acordion {
+          margin: 1rem 0;
+        }
+      }
+    }
+  }
+
+  // contacto
+  .zonas-influencia-contacto {
+    margin-bottom: 1rem;
+  }
+}
+
+// 320 - 767 landscape
+@media only screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+  // carousel
+  .carousel {
+    .carousel-inner {
+      .carousel-item {
+        .container {
+          .row {
+            .info {
+              align-self: center;
+              padding: 1rem;
+              border-radius: 6px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // headings
+  .heading {
+    .container {
+      .row {
+        min-height: 220px;
+      }
+    }
+  }
+
+  // quienes somos
+  .quienes-somos-excerpt {
+    .container {
+      .row {
+        .img,
+        .txt {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  // lugares de atencion
+  .lugares-atencion {
+    .container {
+      .row {
+        div {
+          .card {
+            .txt {
+              p {
+                min-height: 72px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // instituciones
+  .instituciones {
+    .container {
+      .row {
+        li {
+          .row {
+            h2 {
+              padding: 0 0.5rem;
+            }
+
+            .icon {
+              display: none;
+            }
+
+            div {
+              flex: 0 0 100%;
+              max-width: 100%;
+              padding: 0;
+
+              br {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // staff
+  .staff {
+    .container {
+      .row {
+        .title {
+          margin-bottom: 1rem;
+
+          p {
+            br {
+              display: none;
+            }
+          }
+        }
+
+        .cv {
+          .card {
+            min-height: 170px;
+
+            p {
+              font-size: 0.8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // apnea sueño
+  .info {
+    .container {
+      .row {
+        .diagnostico-apnea {
+          .img-container {
+            img {
+              display: block;
+            }
+          }
+
+          .poligrafos {
+            span {
+              margin-bottom: 0;
+              margin-top: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // contact heading
+  .contact-heading {
+    .container {
+      .row {
+        .form-container {
+          p {
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+
+  // preguntas frecuentes
+  .categorias-faqs {
+    .container {
+      .row {
+        li {
+          .category-card {
+            h5 {
+              min-height: 58px;
+            }
+
+            a {
+              letter-spacing: 0;
+              margin-top: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
